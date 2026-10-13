@@ -1,0 +1,13 @@
+git
+workflow-aggregator
+pipeline-stage-view
+docker-workflow
+docker-plugin
+nodejs
+credentials-binding
+github
+github-branch-source
+ssh-agent
+junit
+timestamper
+ws-cleanup

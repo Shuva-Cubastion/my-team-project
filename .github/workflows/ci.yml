@@ -1,0 +1,22 @@
+name: CI Pipeline
+
+on:
+  push:
+    branches: [main, feature-branch]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    name: validate-feature
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Check feature file
+        run: test -f feature.txt
+
+      - name: Validate content
+        run: grep -Fxq "This is a feature file" feature.txt
